@@ -1,0 +1,2 @@
+# Amply
+Very simple language
