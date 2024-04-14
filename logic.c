@@ -11,12 +11,13 @@ void logica_em_detalhe(char linhas[4096][MAX_CHAR], int *indice_linha, char *lin
 	int endereco, indice, indice_1, indice_2, valor, indice_receptor, indice_transmissor, limite_inferior, limite_superior;
 	int saltos[MAX_LINES];
 
-	//Correções e atualizações de sintaxe:
-	remover_espacos(linha); 
+	//Correções e atualizações de sintaxe: 
 	int valor_vazio = encontrar_proximo_vazio();
 	int valor_preenchido = valor_vazio - 1;
+	remover_espacos(linha);
 	substituir(linha, '#', valor_vazio);
 	substituir(linha, '%', valor_preenchido);
+	
 
 
 	//Lógica:
@@ -128,6 +129,16 @@ void logica_em_detalhe(char linhas[4096][MAX_CHAR], int *indice_linha, char *lin
 	else if(sscanf(linha, "[%d]=[%d]", &indice_receptor, &indice_transmissor) == 2)
 	{
 		atribuir_valor(indice_receptor, lista[indice_transmissor]);
+	}
+	
+	else if(sscanf(linha, "[%d]=[[%d]]", &indice_receptor, &indice_transmissor) == 2)
+	{
+		atribuir_valor(indice_receptor, lista[lista[indice_transmissor]]);
+	}
+	
+	else if(sscanf(linha, "[%d]=[[[%d]]]", &indice_receptor, &indice_transmissor) == 2)
+	{
+		atribuir_valor(indice_receptor, lista[lista[lista[indice_transmissor]]]);
 	}
 	
 	else if(sscanf(linha, "[%d]=[%d - %d]", &indice, &indice_1, &indice_2) == 2) 

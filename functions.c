@@ -36,19 +36,19 @@ void substituir(char *str, char character, unsigned char substituto_int)
     const char *substituto = int_string(substituto_int);
     
     while (posicao != NULL) {
-        // Calcula o tamanho da string de substituição
+        //Calcula o tamanho da string de substituição
         int tamanho_substituto = strlen(substituto);
 
-        // Calcula o tamanho da parte restante da string original após a ocorrência do caractere alvo
+        //Calcula o tamanho da parte restante da string original após a ocorrência do caractere alvo
         int tamanho_resto = strlen(posicao + 1);
 
-        // Move o restante da string para frente para abrir espaço para a substituição
+        //Move o restante da string para frente para abrir espaço para a substituição
         memmove(posicao + tamanho_substituto, posicao + 1, tamanho_resto);
 
-        // Copia a string de substituição para a posição onde estava o caractere alvo
+        //Copia a string de substituição para a posição onde estava o caractere alvo
         strncpy(posicao, substituto, tamanho_substituto);
 
-        // Encontra a próxima ocorrência do caractere alvo na string
+        //Encontra a próxima ocorrência do caractere alvo na string
         posicao = strchr(posicao + tamanho_substituto, character);
     }
 }
