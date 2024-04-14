@@ -22,7 +22,7 @@ Very simple language
 [n] *= [a]
 ```
 
-### Lógic
+### Logic
 
 ```
 [n] = [a] < [b]
