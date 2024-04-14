@@ -1,14 +1,14 @@
 # Amply
 Very simple language
 
-##Sintax
+## Sintax
 
 ```
 #					First empty memory address
 %					Last occupied memory address
 ```
 
-###Memory acess
+### Memory acess
 
 ```
 [n]					Access address n from a list
@@ -22,7 +22,7 @@ Very simple language
 [n] *= [a]
 ```
 
-###Lógic
+### Lógic
 
 ```
 [n] = [a] < [b]
@@ -30,7 +30,7 @@ Very simple language
 [n] = [a] == [b]
 ```
 
-###Loops
+### Loops
 ```
 :a					Enter an address to return
 goto:a
@@ -38,7 +38,7 @@ if[n]:a				If the memory address is 1, it returns to the indicated memory locati
 ```
 
 
-##Example
+## Example
 ```
 [0: 2] = 1
 print([1:2])
