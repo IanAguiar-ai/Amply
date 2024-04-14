@@ -12,6 +12,15 @@ Very simple language
 [n]					Access address n from a list
 [n] = a
 [n] = [a]
+[n] = [a - b]
+[n] = [a + b]
+[n] = [[a]]
+[n] = [[a] - b]
+[n] = [[a] + b]
+[n] = [[[a]]]
+[a:b] = n
+[a:b] = [n]
+[n] = [a:b]			Sum
 [n] += a
 [n] += [a]
 [n] -= a
@@ -27,9 +36,11 @@ Very simple language
 [n] = [a] < [b]
 [n] = [a] < b
 [n] = a < [b]
+[n] = a < b
 [n] = [a] <= [b]
 [n] = [a] <= b
 [n] = a <= [b]
+[n] = a <= b
 [n] = [a] == [b]
 [n] = [a] == b
 [n] = a == [b]
@@ -40,6 +51,12 @@ Very simple language
 :a					Enter an address to return
 goto:a
 if[n]:a				If the memory address is 1, it returns to the indicated memory location
+```
+
+### Prints
+```
+print[n]
+print[a:b]
 ```
 
 
@@ -54,7 +71,7 @@ print([1:2])
 
 [1] += [2]
 [2] += [1]
-print([1:2])
+print[1:2]
 [0] = [2] < 1000
 
 if[0]:0
@@ -77,6 +94,21 @@ if[0]:0
 [2] = [[3]]
 [0] += [2]
 [1] = [3] < %
-print([0])
+print[0]
 if[1]:0
+```
+
+### (n^2 + n)/2
+```
+[0] = 1
+
+:0
+
+[#] = #
+[0] = % < 10
+
+if[0]:0
+
+[0] = [1:%]
+print[0]
 ```
