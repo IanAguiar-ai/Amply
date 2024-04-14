@@ -45,7 +45,7 @@ if[n]:a				If the memory address is 1, it returns to the indicated memory locati
 
 ## Example
 
-###FIBONACCI:
+### FIBONACCI:
 ```
 [0: 2] = 1
 print([1:2])
@@ -60,7 +60,7 @@ print([1:2])
 if[0]:0
 ```
 
-###SUM:
+### SUM:
 ```
 [0] = 0
 [1] = 1
