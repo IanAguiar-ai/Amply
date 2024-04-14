@@ -4,14 +4,14 @@ Very simple language
 ##Sintax
 
 ```
-#					Primeiro endereço de memória vazio
-%					Último endereço de memória ocupado
+#					First empty memory address
+%					Last occupied memory address
 ```
 
 ###Memory acess
 
 ```
-[n]					Acessa o endereço n de uma lista
+[n]					Access address n from a list
 [n] = a
 [n] = [a]
 [n] += a
@@ -32,9 +32,9 @@ Very simple language
 
 ###Loops
 ```
-:a
+:a					Enter an address to return
 goto:a
-if[n]:a
+if[n]:a				If the memory address is 1, it returns to the indicated memory location
 ```
 
 
