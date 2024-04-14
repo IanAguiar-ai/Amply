@@ -2,14 +2,12 @@
 Very simple language
 
 ## Sintax
-
 ```
 #					First empty memory address
 %					Last occupied memory address
 ```
 
 ### Memory acess
-
 ```
 [n]					Access address n from a list
 [n] = a
@@ -23,11 +21,16 @@ Very simple language
 ```
 
 ### Logic
-
 ```
 [n] = [a] < [b]
+[n] = [a] < b
+[n] = a < [b]
 [n] = [a] <= [b]
+[n] = [a] <= b
+[n] = a <= [b]
 [n] = [a] == [b]
+[n] = [a] == b
+[n] = a == [b]
 ```
 
 ### Loops
@@ -40,6 +43,8 @@ if[n]:a				If the memory address is 1, it returns to the indicated memory locati
 
 ## Example
 ```
+FIBONACCI:
+
 [0: 2] = 1
 print([1:2])
 
@@ -51,4 +56,4 @@ print([1:2])
 [0] = [2] < 1000
 
 if[0]:0
-``
+```

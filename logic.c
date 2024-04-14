@@ -154,6 +154,11 @@ void logica_em_detalhe(char linhas[4096][MAX_CHAR], int *indice_linha, char *lin
 	{
 		atribuir_valor(indice, lista[indice] * valor);
 	}
+	
+	else if(sscanf(linha, "[%d]/=%d", &indice, &valor) == 2) 
+	{
+		atribuir_valor(indice, lista[indice] % valor);
+	}
 
 	else if(sscanf(linha, "[%d]+=[%d]", &indice_receptor, &indice_transmissor) == 2)
 	{
@@ -168,6 +173,11 @@ void logica_em_detalhe(char linhas[4096][MAX_CHAR], int *indice_linha, char *lin
 	else if(sscanf(linha, "[%d]*=[%d]", &indice_receptor, &indice_transmissor) == 2)
 	{
 		atribuir_valor(indice_receptor, lista[indice_receptor] * lista[indice_transmissor]);
+	}
+	
+	else if(sscanf(linha, "[%d]/=[%d]", &indice_receptor, &indice_transmissor) == 2)
+	{
+		atribuir_valor(indice_receptor, lista[indice_receptor] % lista[indice_transmissor]);
 	}
 
 
