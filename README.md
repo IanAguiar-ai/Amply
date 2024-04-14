@@ -60,7 +60,7 @@ print[a:b]
 ```
 
 
-## Example
+## Examples
 
 ### FIBONACCI:
 ```
@@ -98,7 +98,7 @@ print[0]
 if[1]:0
 ```
 
-### (n^2 + n)/2
+### (n^2 + n)/2:
 ```
 [0] = 1
 
